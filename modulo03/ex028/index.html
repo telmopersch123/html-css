@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 400px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px black solid;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+        }
+        #colorstable1{
+            background-color: rgb(255, 250, 240);
+        }
+        #colorstable2{
+            background-color: rgb(255, 234, 127);
+        }
+        #colorstable3{
+            background-color: rgb(250, 221, 215);
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de Células</h1>
+    <table>
+        <tr>
+            <td colspan="2" id="colorstable1">A1</td>
+            <td rowspan="4" id="colorstable2">A2</td>
+
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>A5</td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="colorstable3">A7</td>
+            <td>A8</td>
+        </tr>
+        <tr>
+            <td>A11</td>
+        </tr>
+    </table>
+</body>
+</html>

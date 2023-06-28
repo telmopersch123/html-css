@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 400px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+        caption{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        td{
+            border: 1px black solid;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+        }
+        th{
+            border: 1px black solid;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder; 
+        }
+        #col1{
+            background-color: rgb(186, 7, 177);
+            color:rgb(255, 255, 255);
+        }
+        #col2{
+            background-color: rgb(7, 96, 186);
+            color:rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de filmes</h1>
+    <table>
+        <caption>
+            Filmaços do balacobaco
+        </caption>
+        <thead>
+            <tr>
+                <td>Grupos</td>
+                <td>Nomes</td>
+                <td colspan="3">Filmes</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" id="col1" scope="rowgroup">Mulheres</th>
+                <td>Ana</td>
+                <td>XXXXXX</td>
+                <td>XXXX</td>
+                <td>XXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>Larissa</td>
+                <td>XXXXXX</td>
+                <td>XXXXX</td>
+                <td>XXXXXXX</td>
+            </tr>
+            <tr>
+                <td>Eduarda</td>
+                <td>XX</td>
+                <td>XXXXX</td>
+                <td>XXXXXXXX</td>
+            </tr>
+            <tr>
+                <th rowspan="3" id="col2" scope="rowgroup">Homens</th>
+                <td>Fabricio</td>
+                <td>XXXX</td>
+                <td>XXXXXXXXXXXXXXXX</td>
+                <td>XXXXXX</td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td>XXXXXXXXXX</td>
+                <td>XXXXX</td>
+                <td>XXXXXXXXXXXXX</td>
+            </tr>
+            <tr>
+                <td>Renato garcias</td>
+                <td>XXXXXXXX</td>
+                <td>XXXXXX</td>
+                <td>XXXXXXXX</td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+</body>
+</html>

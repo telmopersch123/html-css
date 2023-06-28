@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 200px;
+            height: 50px;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px black solid;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            border: 1px black solid;
+            padding: 20px;
+        }
+        .rodape{
+            background-color: rgb(124, 124, 124);
+            color: white;
+        }
+        .materia{
+            text-align: left;
+        }
+        thead{
+            background-color: rgb(124, 124, 124);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+       <thead>
+        <tr>
+            <td rowspan="2">Área</td>
+            <td rowspan="2">Disciplinas</td>
+            <td colspan="2">Notas</td>
+            <td rowspan="2">Média</td>
+        </tr>
+        <tr>
+            <td>Nota 1</td>
+            <td>Nota 2</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <th rowspan="4">Extras</th>
+            <td class="materia">Química</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td class="materia">Geografia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td class="materia">Matemática</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td class="materia">História</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr class="rodape">
+            <th colspan="4" class="materia">Média de Exatas</th>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Humanas</th>
+            <td class="materia">História</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td class="materia">Geografia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr class="rodape">
+            <th colspan="4" class="materia">Média de Humanas</th>
+            <td>0.0</td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>
