@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form method="post" action="cadastro.php" autocomplete="off">
+        <fieldset class="fieldsets_form" id="filedset_names">
+            <legend>Quem é você?</legend>
+            <p><label for="itext">Nome:</label> <input autocomplete="text" type="text" name="text" id="itext" required></p>
+            <p><label for="itext0">Sobrenome:</label> <input autocomplete="text" type="text" name="text" id="itext0" required></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Dados</legend>
+                <p><label for="idate">Data de Nascimento:</label></label> <input REQUIRED autocomplete="date" type="date" name="date" id="idate"></p>
+                <p><label for="iemail"> Email:</label> <input REQUIRED type="email" name="email" id="iemail"></p>
+                <p><label for="itel">Telefone</label>: <input REQUIRED autocomplete="itel" type="tel" name="tel" id="itel" pattern="^\d{2}\d{4}\d{4}"></p>
+                <p><label for="icor">Sua Cor:</label> <input autocomplete="color" type="color" name="cor" id="icor"></p>
+                <span style="display: flex;">
+                    <p><label for="isexo">Sexo:</label></p>
+                    <fieldset style="width: 150px; height: 60px; margin-left: 68px;">
+                            <p style="transform: translate(0% , -50%)"><label for="isexo">Homem</label><input value="Masc" checked REQUIRED autocomplete="radio" type="radio" name="sexo" id="isexo">
+                            <p style="transform: translate(0% , -50%)"><label for="isexo0">Mulher</label>&nbsp;<input value="Fem" REQUIRED autocomplete="radio" type="radio" name="sexo" id="isexo0">
+                            </p>
+                        </fieldset>
+                </span>
+                <br>
+                <span style="display: flex;">
+                    <p><label for="ichecked">Já visitou Quais <br>Desses Sites?</label></p>
+                    <fieldset style="width: 150px; height: 100px;">
+                        <p style="margin-bottom: -10px; transform: translate(0% , -50%);"><label for="ichecked">Amazon</label> <input style="margin-left: 57px;" type="checkbox" name="checked" id="ichecked"></p>
+                        <p style="margin-bottom: -10px; transform: translate(0% , -50%);"><label for="ichecked0">Curso Em Video</label> <input type="checkbox" name="checked" id="ichecked0"></p>
+                        <p style="margin-bottom: -10px; transform: translate(0% , -50%);"><label for="ichecked1">HostNet</label><input style="margin-left: 61px;" type="checkbox" name="checked" id="ichecked1"></p>
+                        <p style="transform: translate(0% , -50%);"><label for="ichecked2">Ifood</label><input style="margin-left: 80px;" type="checkbox" name="checked" id="ichecked2"></p>
+                    </fieldset>
+                </span>
+                <p><label for="senha01">Senha:</label> <input minlength="5" maxlength="10" REQUIRED size="28" type="password" name="senha" id="senha01" placeholder="Senha Forte"></p>
+                <p><label for="range0">Grau de Urgência:</label> <input step="0.5" type="range" name="range" id="range0"></p>
+        </fieldset>
+        <br>
+        <input type="submit" name="enviar" id="ienviar">
+        <input VALUE="Limpar" type="reset" name="limpar" id="ilimpar">
+    </form>
+</body>
+</html>

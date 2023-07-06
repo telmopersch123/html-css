@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elemento Output</h1>
+    <form autocomplete="off">
+        <fieldset>
+            <p><label for="isom1">Numero 1: </label><input min="0" max="100" type="number" name="soma1" id="isom1" oninput="imostrar.innerHTML = Number(isom1.value) + Number(isom2.value)"></p>
+            <p><label for="isom2">Numero 2: </label><input min="0" max="100" type="number" name="soma1" id="isom2" oninput="imostrar.innerHTML = Number(isom1.value) + Number(isom2.value)"></p>
+            valor
+            <output name="mostrar" id="imostrar">0</output>
+        </fieldset>
+        <br>
+        <fieldset>
+            <p><label for="idata">ano de nascimento:</label> <input type="datetime" name="data" id="idata" oninput="calcIdade()"></p>
+            <p><label for="imesdata">Mês:</label> <input type="datetime" name="data" id="imesdata" oninput="calcIdade()"></p>
+            <p><label for="idiadata">Dia:</label> <input type="datetime" name="data" id="idiadata" oninput="calcIdade()"></p>
+            você tem
+            <output name="outdata" id="ioutdata">0</output>
+            anos e
+            <output name="outdata" id="imes">0 </output> meses e 
+            <output name="outdata" id="idia">0 </output> dias
+        </fieldset>
+        <br>
+        <input type="submit" name="enviar" id="ienviar">
+        <input value="Limpar" type="reset" name="resetar" id="iresetar">
+    </form>
+    <script>
+        function calcIdade(){
+            var hoje = new Date();
+            var diaAtual = new Date().getDate();
+            var nascimentoano = Number(idata.value);
+            var nascimentomes = Number(imesdata.value);
+            var nascimentodia = Number(idiadata.value);
+            var dianasc = Number(idiadata.value);
+
+            var diff = Math.abs(hoje - nascimentodia);
+            var milissegundosPordia = 24 * 60 * 60 * 1000;
+            var totalDias = Math.floor(diff / milissegundosPordia);
+
+            var anos = Math.floor(totalDias / 365);
+            var meses = Math.floor((totalDias % 365) / 30);
+            var nascimentodia = totalDias - (anos * 365) - (meses * 30);
+
+
+            var anos = hoje.getFullYear() - nascimentoano;
+            var meses = hoje.getMonth() - nascimentomes;
+            var dia =  hoje.getDate() - nascimentodia;
+
+            var mesAnterior = new Date(hoje.getFullYear(), hoje.getMonth() - 1, 1);
+                    var ultimoDiaMesAnterior = new Date(mesAnterior.getFullYear(), mesAnterior.getMonth() + 1, 0).getDate();
+                    var diaps1 = ultimoDiaMesAnterior - dianasc;
+                    dia = diaps1 + diaAtual;
+                    if(dia > 31){
+                        meses++;
+                        dia = dia - ultimoDiaMesAnterior - 1;
+                    }
+
+            if(meses < 0 || (meses === 0 && hoje.getDate() < nascimento.getDate())){
+                anos--;
+                meses = 12 - Math.abs(meses);
+            }
+
+            ioutdata.innerHTML = Number(anos);
+            imes.innerHTML = Number(meses);
+            idia.innerHTML = Number(dia);
+        }
+    </script>
+</body>
+</html>
