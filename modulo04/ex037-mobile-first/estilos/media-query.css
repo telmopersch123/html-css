@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/*typical device breakpoints
+Celular - 320px — 480px.
+Tablet - 481px — 768px.
+DeskTop - 769px — 1200px.
+Tv - 1200px*/
+
+
+@media print{
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    main{
+        width: 60vw;
+    }
+
+#icon-Cel{display: none;}
+#icon-Tab{display: block;}
+#icon-pc{display: none;}
+#icon-Imp{display: none;}
+#icon-Tv{display: none;}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    main{
+        width: 80vw;
+    }
+
+#icon-Cel{display: none;}
+#icon-Tab{display: none;}
+#icon-pc{display: block;}
+#icon-Imp{display: none;}
+#icon-Tv{display: none;}
+}
+
+@media screen and (min-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 90vw;
+    }
+
+#icon-Cel{display: none;}
+#icon-Tab{display: none;}
+#icon-pc{display: none;}
+#icon-Imp{display: none;}
+#icon-Tv{display:  block;} 
+}
