@@ -9,9 +9,31 @@ Tv - 1200px*/
 
 @media print{
 
+h1{
+    color: black;
+    text-shadow: none;
+}
+main{
+    border: 1px rgba(0, 0, 0, 0.661) solid;
+    width: 90vw;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+main::after{
+    content: "Essa página foi imprimida dia 11/07/23";
+    text-decoration:underline;
+}
+
+#icon-Cel{display: none;}
+#icon-Tab{display: none;}
+#icon-pc{display: none;}
+#icon-Imp{display: block;}
+#icon-Tv{display: none;}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
     body{
         background-image: url(../imagens/back-tablet.jpg);
     }
@@ -26,7 +48,7 @@ Tv - 1200px*/
 #icon-Tv{display: none;}
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
     body{
         background-image: url(../imagens/back-pc.jpg);
     }
@@ -41,7 +63,7 @@ Tv - 1200px*/
 #icon-Tv{display: none;}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
     body{
         background-image: url(../imagens/back-tv.jpg);
     }
